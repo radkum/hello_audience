@@ -1,0 +1,19 @@
+[package]
+name = "hello_audience"
+version = "0.1.0"
+edition = "2021"
+build = "build.rs"
+
+[lib]
+path = "src/lib.rs"
+crate-type = ["cdylib"]
+
+[dependencies]
+kernel-print    = "~0.1.0"
+
+[build-dependencies]
+winreg = "~0.7"
+failure = "0.1.8"
+
+[profile.dev]
+panic = "abort"
